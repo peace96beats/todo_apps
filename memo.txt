@@ -1,0 +1,20 @@
+
+Cloud9でMySQLを使う
+http://qiita.com/ao_love/items/31b660ab53bee959c940
+
+**************
+
+grant all on dotinstall_todo_app.* to dbuser@localhost identified by '$6Ydnt7p';
+
+***********
+
+create table todos(
+    id int not null auto_increment primary key,
+    state tinyint(1) default 0, /* 0:note finished, 1:finished */
+    title text
+);
+
+insert into todos (state,title) values
+(0, 'todo 0'),
+(0, 'todo 1'),
+(0, 'todo 2');
